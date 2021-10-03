@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require('dotenv').config();
 require("@nomiclabs/hardhat-etherscan");
+require("solidity-coverage");
 
 
 // This is a sample Hardhat task. To learn how to create your own go to

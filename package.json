@@ -16,6 +16,7 @@
     "hardhat": "^2.6.4"
   },
   "devDependencies": {
-    "@nomiclabs/hardhat-etherscan": "^2.1.6"
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "solidity-coverage": "^0.7.17"
   }
 }
