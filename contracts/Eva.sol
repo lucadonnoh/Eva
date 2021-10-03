@@ -6,20 +6,26 @@ import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
+import "./ERC2981ContractWideRoyalties.sol";
 
-contract Eva is ERC721URIStorage, AccessControl {
+contract Eva is ERC721URIStorage, ERC2981ContractWideRoyalties, AccessControl {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, AccessControl) returns (bool) {
+    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, ERC2981ContractWideRoyalties, AccessControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 
     constructor() ERC721("Eva", "EVA") {
         //console.logBytes4(type(ERC721URIStorage).interfaceId);
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _setRoyalties(0xf8b32D30aC6Ab3030595432533D7836FD76B078d, 1000); //to hex6c, 10% royalties
+    }
+
+    function contractURI() public pure returns (string memory) {
+        return "ipfs://...";
     }
 
     modifier onlyMinter {
