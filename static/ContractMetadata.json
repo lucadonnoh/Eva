@@ -1,6 +1,6 @@
 {
-    "name":"Eva",
-    "description":"Eva is a collection of 3 artworks etc etc",
-    "image":"",
-    "external_link":""
+    "name":"Eva - A mitochondrial story",
+    "description":"EVA is a generative art project that stems from the idea of representing the genetic code (DNA) in an artistic way. The DNA represents the code of every living being; this code was the inspiration to write another code — programmable — that generated the artwork. The result was a fortunate meeting of codes: the first executed over millennia by nature and the second executed in the blink of an eye by the machine, mediated by the intervention of man. Man, machine and nature merge and collaborate in this artistic project that takes an evocative name: EVA.",
+    "image":"ipfs://QmTmNMUFLpL4Vy14Rw7eCm2GPRGHYPzVxdi8oBDTgHuZQd",
+    "external_link":"https://hex6c.medium.com/eva-a-mitochondrial-story-eec51f8c803a"
 }

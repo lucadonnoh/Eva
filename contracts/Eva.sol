@@ -25,7 +25,7 @@ contract Eva is ERC721URIStorage, ERC2981ContractWideRoyalties, AccessControl {
     }
 
     function contractURI() public pure returns (string memory) {
-        return "ipfs://...";
+        return "ipfs://QmQjuJ1jzz5BNPMfz5TQSg7h6CmyYLV28aNLKqfw9UwD3J";
     }
 
     modifier onlyMinter {
